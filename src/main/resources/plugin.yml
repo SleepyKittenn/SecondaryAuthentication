@@ -1,5 +1,5 @@
 name: SecondaryAuthentication-Bukkit
-version: 1.0
+version: 1.0.0
 main: live.amsleepy.secondaryauthenticationbukkit.SecondaryAuthentication_Bukkit
 api-version: 1.13
 description: Acts as a 2nd layer of protection on top of authentication plugins for server staffs
