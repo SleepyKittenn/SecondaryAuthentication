@@ -1,0 +1,10 @@
+required_players:
+  PlayerName1:
+    code: "secretCode1"
+    verificationDuration: 300  # The duration in seconds for which the verification will be valid (300 seconds = 5 minutes).
+  PlayerName2:
+    code: "secretCode2"
+    verificationDuration: -1  # Verification not required again during the session.
+
+global_settings:
+  verificationTimeout: 60  # The duration in seconds before any player is kicked for not verifying.
