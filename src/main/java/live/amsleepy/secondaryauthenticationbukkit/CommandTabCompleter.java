@@ -22,19 +22,15 @@ public class CommandTabCompleter implements TabCompleter {
         List<String> suggestions = new ArrayList<>();
 
         if (command.getName().equalsIgnoreCase("verify")) {
-            // For the /verify command, there are no subcommands,
-            // and we do not provide specific tab completions for now.
             return suggestions;
         } else if (command.getName().equalsIgnoreCase("secondaryauthentication")) {
             if (args.length == 1) {
-                // Provide suggestions for the possible subcommands of /secondaryauthentication
                 suggestions = Arrays.asList("reload");
             }
         }
 
         if (args.length > 0) {
             String currentArg = args[args.length - 1].toLowerCase();
-            // Create a new list that contains only the suggestions that start with the currentArg
             return suggestions.stream()
                     .filter(suggestion -> suggestion.toLowerCase().startsWith(currentArg))
                     .collect(Collectors.toList());

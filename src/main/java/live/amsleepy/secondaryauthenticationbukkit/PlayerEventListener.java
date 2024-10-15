@@ -38,12 +38,9 @@ public class PlayerEventListener implements Listener {
         Player player = event.getPlayer();
         if (PlayerVerificationManager.needsVerification(plugin, player)) {
             String command = event.getMessage().split(" ")[0].toLowerCase();
-
-            // Allow exceptions for /login and /verify commands
             if (command.equals("/login") || command.equals("/verify")) {
                 return;
             }
-
             event.setCancelled(true);
             player.sendMessage(plugin.getPrefix() + "Please verify yourself using /verify <secret code>");
         }

@@ -29,7 +29,7 @@ public final class SecondaryAuthentication_Bukkit extends JavaPlugin {
         PluginCommand verifyCommand = getCommand("verify");
         if (verifyCommand != null) {
             verifyCommand.setExecutor(new VerificationCommandExecutor(this));
-            verifyCommand.setTabCompleter(new CommandTabCompleter(this));   // Register tab completer for /verify
+            verifyCommand.setTabCompleter(new CommandTabCompleter(this));
         } else {
             getLogger().severe(prefix + "Command 'verify' is not defined in plugin.yml");
         }
@@ -37,12 +37,12 @@ public final class SecondaryAuthentication_Bukkit extends JavaPlugin {
         PluginCommand secAuthCommand = getCommand("secondaryauthentication");
         if (secAuthCommand != null) {
             secAuthCommand.setExecutor(new SecondaryAuthenticationCommandExecutor(this));
-            secAuthCommand.setTabCompleter(new CommandTabCompleter(this));  // Register tab completer for /secondaryauthentication
+            secAuthCommand.setTabCompleter(new CommandTabCompleter(this));
         } else {
             getLogger().severe(prefix + "Command 'secondaryauthentication' is not defined in plugin.yml");
         }
-
-        getLogger().info(prefix + "SecondaryAuthentication-Bukkit enabled.");
+        String pluginVersion = getDescription().getVersion();
+        getLogger().info(prefix + "SecondaryAuthentication-Bukkit v" + pluginVersion + " enabled, made by sleepy.");
     }
 
     @Override

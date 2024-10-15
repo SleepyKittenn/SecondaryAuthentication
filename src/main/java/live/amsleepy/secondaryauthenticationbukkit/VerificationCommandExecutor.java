@@ -29,7 +29,7 @@ public class VerificationCommandExecutor implements CommandExecutor {
         String inputCode = args[0];
         if (PlayerVerificationManager.verifyPlayer(plugin, player, inputCode)) {
             player.sendMessage(plugin.getPrefix() + "You have been successfully verified.");
-            plugin.cancelScheduledKick(player);  // Cancel the scheduled kick if the player verifies successfully
+            plugin.cancelScheduledKick(player);
         } else {
             player.sendMessage(plugin.getPrefix() + "Incorrect verification code. You will be kicked.");
             player.kickPlayer(plugin.getPrefix() + "Incorrect verification code.");
