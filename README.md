@@ -12,6 +12,7 @@
 - **Kick Unverified Players:** Automatically kicks players who fail to verify within a specified timeout.
 - **Configurable Commands:** Commands to manage verification and plugin configuration.
 - **Customizable Settings:** Easily configure which players need verification and the timeout duration.
+- **Authentication Session:** Users are prompted to verify everytime the session resets.
 
 ## Installation
 
