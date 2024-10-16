@@ -40,4 +40,8 @@ public class PlayerVerificationManager {
     public static void expireVerification(Player player) {
         verifiedPlayers.remove(player.getName());
     }
+
+    public static void resetVerificationStatus(Player player) {
+        verifiedPlayers.remove(player.getName());
+    }
 }

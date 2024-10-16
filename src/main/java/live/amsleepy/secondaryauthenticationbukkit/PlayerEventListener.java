@@ -18,6 +18,9 @@ public class PlayerEventListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+        // Reset player's verification status on join
+        PlayerVerificationManager.resetVerificationStatus(player);
+
         if (PlayerVerificationManager.needsVerification(plugin, player)) {
             player.sendMessage(plugin.getPrefix() + "Please verify yourself using /verify <secret code>");
             plugin.scheduleKick(player);
