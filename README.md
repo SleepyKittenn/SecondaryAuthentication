@@ -15,7 +15,7 @@
 
 ## Installation
 
-1. **Download** the latest version of the plugin from the [releases](https://github.com/your-username/SecondaryAuthentication/releases) page.
+1. **Download** the latest version of the plugin from the [releases](https://github.com/SleepyKittenn/SecondaryAuthentication/releases) page.
 2. **Place** the `SecondaryAuthentication-Bukkit.jar` file into your server's `plugins` directory.
 3. **Start** the server to generate the default configuration files.
 4. **Edit** the `config.yml` file in the `plugins/SecondaryAuthentication-Bukkit` directory to customize your settings.
